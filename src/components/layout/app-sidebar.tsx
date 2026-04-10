@@ -8,7 +8,7 @@ const AppSidebar = () => {
     { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { title: "Applications", href: "/applications", icon: FileText },
     { title: "Analytics", href: "/analytics", icon: BarChart3 },
-    { title: "Job Analyzer", href: "/analyzer", icon: Sparkles },
+    { title: "Job Analyzer", href: "/job-analyzer", icon: Sparkles },
   ];
   const settingsItem = { title: "Settings", href: "/settings", icon: Settings };
 
