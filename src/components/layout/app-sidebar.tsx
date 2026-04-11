@@ -1,20 +1,13 @@
 "use client";
 
-import { BarChart3, FileText, LayoutDashboard, Sparkles, Settings } from "lucide-react";
 import NavItem from "./navigation/nav-item";
+
+import { navigationItems, settingItem } from "@/config/navigation";
 
 import { usePathname } from "next/navigation";
 
 const AppSidebar = () => {
   const pathname = usePathname();
-
-  const navigationItems = [
-    { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-    { title: "Applications", href: "/applications", icon: FileText },
-    { title: "Analytics", href: "/analytics", icon: BarChart3 },
-    { title: "Job Analyzer", href: "/job-analyzer", icon: Sparkles },
-  ];
-  const settingsItem = { title: "Settings", href: "/settings", icon: Settings };
 
   return (
     <aside className="flex h-screen w-64 shrink-0 flex-col border-r border-emerald-900/30 bg-[linear-gradient(to_bottom,var(--sidebar-gradient-from),var(--sidebar-gradient-to))] backdrop-blur-xl">
@@ -42,11 +35,11 @@ const AppSidebar = () => {
       {/* footer */}
       <div className="border-t border-gray-700/50 p-6">
         <NavItem
-          key={settingsItem.href}
-          title={settingsItem.title}
-          href={settingsItem.href}
-          icon={settingsItem.icon}
-          isActive={pathname.startsWith(settingsItem.href) || pathname === settingsItem.href}
+          key={settingItem.href}
+          title={settingItem.title}
+          href={settingItem.href}
+          icon={settingItem.icon}
+          isActive={pathname.startsWith(settingItem.href) || pathname === settingItem.href}
         />
       </div>
     </aside>
