@@ -11,6 +11,7 @@ const eslintConfig = defineConfig([
       "no-unused-vars": "warn",
       "react/jsx-key": "error",
       "react-hooks/rules-of-hooks": "error",
+      "react/no-unescaped-entities": "off",
     },
   },
   globalIgnores([

@@ -5,7 +5,7 @@ const AppContent = ({ children }: { children: React.ReactNode }) => {
     <div className="flex h-screen flex-1 flex-col">
       <AppTopbar />
 
-      <main className="flex-1 overflow-auto bg-linear-to-r from-[#054031] to-[#011a14] p-6">
+      <main className="flex-1 overflow-auto bg-linear-to-r from-[#054031] to-[#011a14] p-8">
         {children}
       </main>
     </div>
