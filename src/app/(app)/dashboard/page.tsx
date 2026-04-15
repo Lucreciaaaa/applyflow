@@ -1,4 +1,4 @@
-import Priorities from "@/components/features/dashboard/priorities";
+import Priorities from "@/components/features/dashboard/priorities/priorities";
 import PageIntro from "@/components/shared/page-intro";
 
 export default function Dashboard() {
