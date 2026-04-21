@@ -1,32 +1,50 @@
-import { Bell, Search } from "lucide-react";
-import { Input } from "../ui/input";
+"use client";
+
+import { Bolt, LogOut } from "lucide-react";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import { Avatar, AvatarFallback } from "../ui/avatar";
 
 const AppTopbar = () => {
   return (
-    <header className="flex h-16 items-center border-b border-emerald-900/30 bg-linear-to-r from-[#03271e] to-[#01110d] px-6 backdrop-blur-xl">
-      <div className="flex w-full items-center">
-        {/* SEARCH */}
-        <div className="flex w-2/5 max-w-md min-w-65">
-          <div className="relative w-full">
-            <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
-
-            <Input
-              placeholder="Search applications..."
-              className="h-9 w-full border-gray-700 bg-gray-800/50 pr-3 pl-9 text-sm text-white placeholder:text-gray-500 disabled:cursor-not-allowed disabled:opacity-50"
-            />
+    <header className="w-full border-b border-emerald-500/20 bg-linear-to-r from-[#009060] to-[#003a2c] backdrop-blur-xl">
+      <div className="flex h-16 items-center justify-between px-6">
+        {/* Logo Section */}
+        <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center rounded-xl bg-[#00b37e] p-2">
+            <Bolt size={24} color="white" strokeWidth={2.5} />
           </div>
+          <h1 className="text-2xl font-semibold tracking-tight text-white">ApplyFlow</h1>
         </div>
 
-        {/* RIGHT */}
-        <div className="ml-auto flex items-center gap-4">
-          <div className="relative">
-            <Bell className="h-4 w-4 text-gray-300" />
-            <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-emerald-400" />
-          </div>
+        {/* Action Section */}
+        <div className="flex items-center gap-4">
+          {/* Avatar  */}
+          <Popover>
+            <PopoverTrigger>
+              <button
+                aria-label="Open user menu"
+                className="group relative focus-visible:outline-2 focus-visible:outline-emerald-400"
+              >
+                <Avatar className="h-10 w-10 border-2 border-emerald-400/30 transition-transform group-hover:scale-105">
+                  <AvatarFallback className="bg-linear-to-br from-emerald-500 to-emerald-700 text-white">
+                    J
+                  </AvatarFallback>
+                </Avatar>
+              </button>
+            </PopoverTrigger>
 
-          <div className="flex h-7 w-7 items-center justify-center rounded-full border border-emerald-500/3 bg-emerald-500/20 text-xs text-emerald-300">
-            JD
-          </div>
+            {/* Popup Logout */}
+            <PopoverContent align="end" className="w-48 border-zinc-800 bg-black p-2 shadow-2xl">
+              <button
+                // TODO : implement logout function
+                onClick={() => console.log("logout")}
+                className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-white transition-all hover:bg-zinc-900 active:scale-95"
+              >
+                <LogOut size={18} className="text-zinc-400" />
+                <span className="text-sm font-medium">Logout</span>
+              </button>
+            </PopoverContent>
+          </Popover>
         </div>
       </div>
     </header>

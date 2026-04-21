@@ -9,7 +9,7 @@ export default function Card({ children, className }: CardProps) {
   return (
     <div
       className={cn(
-        "text-card-foreground rounded-xl border border-emerald-900/30 bg-gray-950/70 backdrop-blur-xl",
+        "rounded-xl border border-emerald-500/20 bg-linear-to-br from-emerald-900/80 to-black/80 p-6 backdrop-blur-xl",
         className,
       )}
     >

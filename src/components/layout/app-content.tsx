@@ -1,11 +1,7 @@
-import AppTopbar from "./app-topbar";
-
 const AppContent = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex h-screen flex-1 flex-col">
-      <AppTopbar />
-
-      <main className="flex-1 overflow-auto bg-linear-to-r from-[#054031] to-[#011a14] p-8">
+    <div className="flex h-screen flex-1 flex-row">
+      <main className="flex-1 overflow-auto bg-linear-to-r from-[#00a871] to-[#004231] p-6">
         {children}
       </main>
     </div>
