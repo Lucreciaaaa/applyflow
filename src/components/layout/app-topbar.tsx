@@ -13,7 +13,7 @@ const AppTopbar = () => {
           <div className="flex items-center justify-center rounded-xl bg-[#00b37e] p-2">
             <Bolt size={24} color="white" strokeWidth={2.5} />
           </div>
-          <h1 className="text-2xl font-semibold tracking-tight text-white">ApplyFlow</h1>
+          <h1 className="text-2xl font-medium tracking-tight text-white">ApplyFlow</h1>
         </div>
 
         {/* Action Section */}
