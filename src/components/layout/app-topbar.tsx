@@ -20,7 +20,7 @@ const AppTopbar = () => {
         <div className="flex items-center gap-4">
           {/* Avatar  */}
           <Popover>
-            <PopoverTrigger>
+            <PopoverTrigger asChild>
               <button
                 aria-label="Open user menu"
                 className="group relative focus-visible:outline-2 focus-visible:outline-emerald-400"
