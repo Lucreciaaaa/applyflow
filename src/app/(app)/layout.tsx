@@ -9,7 +9,7 @@ export default function AppLayout({ children }: Props) {
   return (
     <>
       {/* Desktop */}
-      <div className="hidden h-screen flex-col overflow-y-auto lg:flex">
+      <div className="hidden min-h-screen flex-col lg:flex">
         <AppTopbar />
         <AppContent>{children}</AppContent>
       </div>
