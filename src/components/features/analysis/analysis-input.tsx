@@ -13,7 +13,7 @@ const AnalysisInput = ({ disabled, onSubmit }: InputProps) => {
   const [jobDescription, setJobDescription] = useState(""); */
 
   return (
-    <Card>
+    <Card className="flex flex-1 flex-col gap-6">
       {/* upload */}
       {/* textarea */}
       <button onClick={onSubmit} disabled={disabled} className="text-white">
