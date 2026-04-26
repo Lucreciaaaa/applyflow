@@ -14,7 +14,7 @@ const AnalysisContainer = () => {
         disabled={state.status === "loading"}
         onSubmit={() => setState({ status: "loading" })}
       />
-      <AnalysisOutput />
+      <AnalysisOutput state={state} />
     </div>
   );
 };

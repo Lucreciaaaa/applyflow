@@ -1,14 +1,32 @@
 "use client";
 
-import Card from "@/components/shared/card";
+import { AnalysisState } from "@/types/analysis/state";
 
-const AnalysisOutput = () => {
-  return (
-    <Card className="flex flex-2 flex-col gap-6">
-      {/* upload */}
-      {/* textarea */}
-      <p className="text-white">Analyze CV</p>
-    </Card>
-  );
+import ErrorState from "./output-states/error-state";
+import IdleState from "./output-states/idle-state";
+import LoadingState from "./output-states/loading-state";
+import SuccessState from "./output-states/success-state";
+
+type OutputProps = {
+  state: AnalysisState;
+};
+
+const AnalysisOutput = ({ state }: OutputProps) => {
+  switch (state.status) {
+    case "idle":
+      return <IdleState />;
+
+    case "loading":
+      return <LoadingState />;
+
+    case "success":
+      return <SuccessState data={state.data} />;
+
+    case "error":
+      return <ErrorState message={state.error} />;
+
+    default:
+      return null;
+  }
 };
 export default AnalysisOutput;
