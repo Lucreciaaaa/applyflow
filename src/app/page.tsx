@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className="p-32 bg-amber-700">
-      <Button>Bonsoir</Button>
-    </div>
-  );
+  const isLoggedIn = false; // mock 
+
+  if (isLoggedIn) {
+    redirect("/analyze");
+  }
+
+  redirect("/auth");
 }
