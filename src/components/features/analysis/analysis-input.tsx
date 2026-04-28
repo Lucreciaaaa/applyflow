@@ -68,7 +68,7 @@ const AnalysisInput = ({ disabled, onSubmit }: InputProps) => {
         aria-busy={disabled}
         aria-label="Analyze CV with AI"
         onClick={onSubmit}
-        disabled={disabled} // N'oublie pas de remettre le vrai état ici
+        disabled={disabled}
         className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 py-3 font-medium text-white transition-colors hover:bg-emerald-600 disabled:cursor-not-allowed disabled:opacity-50"
       >
         <Sparkles size={18} color="white" strokeWidth={2} />
