@@ -9,8 +9,8 @@ const LoadingState = () => {
         <Loader2 className="h-10 w-10 animate-spin text-emerald-500" />
 
         <div className="space-y-1">
-          <p className="text-sm font-medium text-white">Analyzing your profile</p>
-          <p className="text-xs text-gray-400">Matching your CV with the job requirements...</p>
+          <p className="font-medium text-white">Analyzing your profile</p>
+          <p className="text-sm text-gray-400">Matching your CV with the job requirements...</p>
         </div>
       </div>
     </Card>
