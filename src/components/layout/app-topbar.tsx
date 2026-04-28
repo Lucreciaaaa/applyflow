@@ -1,6 +1,6 @@
 "use client";
 
-import { Bolt, LogOut } from "lucide-react";
+import { LogOut, Zap } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 
@@ -11,7 +11,7 @@ const AppTopbar = () => {
         {/* Logo Section */}
         <div className="flex items-center gap-3">
           <div className="flex items-center justify-center rounded-xl bg-[#00b37e] p-2">
-            <Bolt size={24} color="white" strokeWidth={2.5} />
+            <Zap size={24} color="white" strokeWidth={2} />
           </div>
           <h1 className="text-2xl font-medium tracking-tight text-white">ApplyFlow</h1>
         </div>
