@@ -4,6 +4,8 @@ import { LogOut, Zap } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 
+// TODO : Remove shadcn component to have a consistent design
+
 const AppTopbar = () => {
   return (
     <header className="w-full border-b border-emerald-500/20 bg-linear-to-r from-[#009060] to-[#003a2c] backdrop-blur-xl">
