@@ -1,12 +1,8 @@
 import Card from "@/components/shared/card";
+import { AnalysisResult } from "@/types/analysis/state";
 
 type Props = {
-  data: {
-    matchScore: number;
-    missingSkills: string[];
-    redFlags: string[];
-    suggestions: string[];
-  };
+  data: AnalysisResult;
 };
 
 const SuccessState = ({ data }: Props) => {
@@ -35,8 +31,8 @@ const SuccessState = ({ data }: Props) => {
       <div>
         <h4 className="font-medium">Suggestions</h4>
         <ul className="list-inside list-disc text-sm text-emerald-200">
-          {data.suggestions.map((s, i) => (
-            <li key={i}>{s}</li>
+          {data.actionableFixes.map((s, i) => (
+            <li key={i}>{s.fix}</li>
           ))}
         </ul>
       </div>

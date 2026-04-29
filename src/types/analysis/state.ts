@@ -1,8 +1,12 @@
-type AnalysisResult = {
+export type AnalysisResult = {
   matchScore: number;
   missingSkills: string[];
   redFlags: string[];
-  suggestions: string[];
+  actionableFixes: {
+    issue: string;
+    fix: string;
+    priority: "high" | "medium" | "low";
+  }[];
 };
 
 export type AnalysisState =
