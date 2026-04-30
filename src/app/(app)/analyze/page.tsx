@@ -1,4 +1,4 @@
-import AnalysisContainer from "@/components/features/analysis/analysis-container";
+import AnalysisContainer from "@/features/analysis/components/analysis-container";
 
 export default function JobAnalyzer() {
   return (

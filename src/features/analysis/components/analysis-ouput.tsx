@@ -2,10 +2,10 @@
 
 import { AnalysisState } from "@/types/analysis/state";
 
-import ErrorState from "./output-states/error-state";
-import IdleState from "./output-states/idle-state";
-import LoadingState from "./output-states/loading-state";
-import SuccessState from "./output-states/success-state";
+import ErrorState from "../../../features/analysis/components/output-states/error-state";
+import IdleState from "../../../features/analysis/components/output-states/idle-state";
+import LoadingState from "../../../features/analysis/components/output-states/loading-state";
+import SuccessState from "../../../features/analysis/components/output-states/success-state";
 
 type OutputProps = {
   state: AnalysisState;
