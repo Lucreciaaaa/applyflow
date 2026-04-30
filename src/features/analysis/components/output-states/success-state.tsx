@@ -2,7 +2,7 @@ import Card from "@/components/shared/card";
 
 import { AlertTriangle, TrendingUp, Wrench, Ban, XCircle, CheckCircle } from "lucide-react";
 
-import { AnalysisResult } from "@/types/analysis/state";
+import { AnalysisResult } from "../../domain/result";
 
 import { priorityConfig, scoreColor } from "@/config/analysis";
 

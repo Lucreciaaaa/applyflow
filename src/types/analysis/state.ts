@@ -1,13 +1,4 @@
-export type AnalysisResult = {
-  matchScore: number;
-  missingSkills: string[];
-  redFlags: string[];
-  actionableFixes: {
-    issue: string;
-    fix: string;
-    priority: "high" | "medium" | "low";
-  }[];
-};
+import { AnalysisResult } from "@/features/analysis/domain/result";
 
 export type AnalysisState =
   | { status: "idle" }
