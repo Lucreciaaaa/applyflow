@@ -8,7 +8,7 @@ type Props = {
 
 const AuthenticationCard = ({ hasAnAccount }: Props) => {
   return (
-    <div className="flex w-full max-w-md flex-col gap-6 rounded-xl border border-emerald-500/20 bg-black/40 p-6 backdrop-blur-xl">
+    <div className="flex w-full max-w-lg flex-col gap-6 rounded-xl border border-emerald-500/20 bg-black/40 p-6 backdrop-blur-xl">
       {/* Card Header */}
       <div className="space-y-4 text-center">
         <div className="flex items-center justify-center gap-2">
@@ -32,11 +32,11 @@ const AuthenticationCard = ({ hasAnAccount }: Props) => {
 
       {/* Card Header */}
       <div className="space-y-4">
-        <button className="focus-visible:border-ring focus-visible:ring-ring/50 inline-flex h-9 w-full shrink-0 items-center justify-center gap-2 rounded-md bg-linear-to-r from-emerald-500 to-emerald-600 px-4 py-2 font-medium whitespace-nowrap text-white transition-all hover:from-emerald-600 hover:to-emerald-700 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50">
+        <button className="focus-visible:border-ring focus-visible:ring-ring/50 inline-flex h-9 w-full shrink-0 items-center justify-center gap-2 rounded-md bg-linear-to-r from-emerald-500 to-emerald-600 px-4 py-2 whitespace-nowrap text-white transition-all hover:from-emerald-600 hover:to-emerald-700 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50">
           {!hasAnAccount ? "Create account" : "Sign in"}
         </button>
-        <p>
-          Already have an account?
+        <p className="text-center text-sm text-emerald-100/60">
+          Already have an account ?{" "}
           <a href="/login" className="text-emerald-400 underline hover:text-emerald-300">
             Sign in
           </a>
