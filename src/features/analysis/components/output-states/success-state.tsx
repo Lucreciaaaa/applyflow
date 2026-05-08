@@ -2,9 +2,9 @@ import Card from "@/components/shared/card";
 
 import { AlertTriangle, TrendingUp, Wrench, Ban, XCircle, CheckCircle } from "lucide-react";
 
-import { AnalysisResult } from "../../domain/result";
+import { AnalysisResult } from "../../../../core/analysis/types/analysis-result";
 
-import { priorityConfig, scoreColor } from "@/config/analysis";
+import { priorityConfig, scoreColor } from "@/features/analysis/config/ui-analysis-config";
 
 type Props = {
   data: AnalysisResult;

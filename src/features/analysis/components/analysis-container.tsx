@@ -5,7 +5,7 @@ import { useState } from "react";
 import AnalysisInput from "./analysis-input";
 import AnalysisOutput from "./analysis-ouput";
 
-import { AnalysisState } from "@/types/analysis/state";
+import { AnalysisState } from "@/features/analysis/state/analysis-state";
 
 const AnalysisContainer = () => {
   const [state, setState] = useState<AnalysisState>({

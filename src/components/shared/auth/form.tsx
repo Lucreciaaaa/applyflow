@@ -7,7 +7,7 @@ import { z } from "zod";
 import { Field, FieldError, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 
-import { signInSchema, signUpSchema } from "@/features/analysis/domain/form-schema";
+import { signInSchema, signUpSchema } from "@/features/analysis/validation/analysis-form-schema";
 
 type LoginFormValues = z.infer<typeof signInSchema>;
 type SignupFormValues = z.infer<typeof signUpSchema>;

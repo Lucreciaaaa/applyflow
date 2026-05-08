@@ -1,4 +1,4 @@
-import { AnalysisResult } from "@/features/analysis/domain/result";
+import { AnalysisResult } from "@/core/analysis/types/analysis-result";
 
 export type AnalysisState =
   | { status: "idle" }

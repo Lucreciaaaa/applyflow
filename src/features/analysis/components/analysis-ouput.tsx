@@ -1,6 +1,6 @@
 "use client";
 
-import { AnalysisState } from "@/types/analysis/state";
+import { AnalysisState } from "@/features/analysis/state/analysis-state";
 
 import ErrorState from "../../../features/analysis/components/output-states/error-state";
 import IdleState from "../../../features/analysis/components/output-states/idle-state";
