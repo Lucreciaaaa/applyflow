@@ -9,17 +9,11 @@ import { AnalysisState } from "@/features/analysis/state/analysis-state";
 
 const AnalysisContainer = () => {
   const [state, setState] = useState<AnalysisState>({
-    status: "success",
-    data: {
-      matchScore: 58,
-      missingSkills: ["Docker", "Kubernetes", "GraphQL"],
-      redFlags: [],
-      actionableFixes: [{ issue: "No testing", fix: "Add unit tests", priority: "high" }],
-    },
+    status: "idle",
   });
 
   return (
-    <div className="flex flex-row gap-6">
+    <div className="flex flex-row items-start gap-6">
       <AnalysisInput
         disabled={state.status === "loading"}
         onSubmit={() => setState({ status: "loading" })}

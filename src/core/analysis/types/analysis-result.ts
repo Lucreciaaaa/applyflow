@@ -1,5 +1,6 @@
 export type AnalysisResult = {
   matchScore: number;
+  summary: string;
   missingSkills: string[];
   redFlags: string[];
   actionableFixes: {

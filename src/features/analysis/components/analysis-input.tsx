@@ -14,7 +14,7 @@ const AnalysisInput = ({ disabled, onSubmit }: InputProps) => {
   const [jobDescription, setJobDescription] = useState(""); */
 
   return (
-    <Card className="flex flex-1 flex-col gap-6">
+    <Card className="flex flex-col gap-6">
       {/* Cardheader */}
       <div className="flex flex-col items-start gap-1.5">
         <div className="flex items-center gap-2">
