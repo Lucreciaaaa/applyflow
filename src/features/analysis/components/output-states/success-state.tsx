@@ -24,10 +24,11 @@ export default function SuccessState({ data }: Props) {
   const missingSkills = data.missingSkills ?? [];
   const redFlags = data.redFlags ?? [];
   const actionableFixes = data.actionableFixes ?? [];
+  const strengths = data.strengths ?? [];
 
   return (
     <Card className="flex flex-2 flex-col gap-8 p-6 text-white" aria-label="CV analysis results">
-      {/* Match Score */}
+      {/* Match Score + Summary */}
       <section className="space-y-3" aria-labelledby="score-title">
         <header className="flex items-center gap-2">
           <TrendingUp className="h-6 w-6 text-white/60" />
@@ -49,6 +50,28 @@ export default function SuccessState({ data }: Props) {
         </div>
 
         <p className="text-sm leading-relaxed text-white/70">{data.summary}</p>
+      </section>
+
+      {/* Strengths */}
+      <section className="space-y-3" aria-labelledby="strengths-title">
+        <header className="flex items-center gap-2">
+          <CheckCircle className="h-5 w-5 text-white/60" />
+          <h4 className="text-base font-medium text-white/90" id="strengths-title">
+            Strengths
+          </h4>
+        </header>
+
+        {strengths.length === 0 ? (
+          <EmptySection message="No significant strengths identified" />
+        ) : (
+          <div className="flex flex-wrap gap-2">
+            {strengths.map((strength, i) => (
+              <span key={i} className="rounded-full bg-white/5 px-3 py-1 text-sm text-white/80">
+                {strength}
+              </span>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Missing skills */}

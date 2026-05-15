@@ -13,7 +13,7 @@ const AnalysisContainer = () => {
   });
 
   return (
-    <div className="flex flex-row items-start gap-6">
+    <div className="flex flex-row gap-6">
       <AnalysisInput
         disabled={state.status === "loading"}
         onSubmit={() => setState({ status: "loading" })}

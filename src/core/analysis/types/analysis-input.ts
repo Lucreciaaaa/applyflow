@@ -1,12 +1,6 @@
-type CvSource = { type: "url"; url: string } | { type: "raw-text"; text: string };
+import { CvSource } from "@/core/cv/types/cv-source";
 
 export type AnalysisInput = {
   cvSource: CvSource;
   jobDescription: string;
-};
-
-export type ParsedCv = {
-  text: string;
-  sourceType: CvSource["type"];
-  parsedAt: Date;
 };

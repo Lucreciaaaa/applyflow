@@ -9,10 +9,6 @@ type InputProps = {
 };
 
 const AnalysisInput = ({ disabled, onSubmit }: InputProps) => {
-  /* TODO :
-  const [file, setFile] = useState<File | null>(null);
-  const [jobDescription, setJobDescription] = useState(""); */
-
   return (
     <Card className="flex flex-col gap-6">
       {/* Cardheader */}
