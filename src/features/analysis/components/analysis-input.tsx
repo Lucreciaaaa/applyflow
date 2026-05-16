@@ -31,7 +31,7 @@ const AnalysisInput = ({ disabled, onSubmit }: InputProps) => {
             type="file"
             id="cv-upload"
             className="absolute inset-0 z-10 cursor-pointer opacity-0"
-            accept=".pdf,.doc,.docx"
+            accept=".pdf"
           />
           <div className="flex flex-col items-center gap-3 p-6 text-center">
             <Upload size={24} color="rgb(0, 210, 145)" />
@@ -39,7 +39,7 @@ const AnalysisInput = ({ disabled, onSubmit }: InputProps) => {
               <p className="text-sm text-emerald-100/70">
                 Drag & drop your CV here or click to browse
               </p>
-              <p className="text-xs text-emerald-100/50">PDF, DOC, DOCX (Max 5MB)</p>
+              <p className="text-xs text-emerald-100/50">PDF only (Max 5MB)</p>
             </div>
           </div>
         </div>
