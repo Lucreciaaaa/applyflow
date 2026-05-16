@@ -1,39 +1,7 @@
 import { ParsedCv } from "../types/parsed-cv";
 import { NormalizedCv } from "../types/normalized-cv";
 
-const COMMON_STOPWORDS = new Set([
-  "the",
-  "and",
-  "for",
-  "with",
-  "a",
-  "an",
-  "to",
-  "in",
-  "on",
-  "of",
-  "at",
-  "by",
-  "from",
-  "as",
-  "is",
-  "are",
-  "was",
-  "were",
-
-  // CV noise
-  "experience",
-  "education",
-  "skills",
-  "projects",
-  "work",
-  "team",
-  "responsible",
-  "responsibilities",
-  "developer",
-  "engineer",
-  "software",
-]);
+import { COMMON_STOPWORDS } from "@/core/shared/constants/stopwords";
 
 // llm ready text construction
 function buildLlmReadyText(parsedCv: ParsedCv): string {
