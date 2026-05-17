@@ -18,7 +18,9 @@ export type AnalysisResult = {
   redFlags: string[];
 
   actionableFixes: ActionableFix[];
+};
 
+export type EnrichedAnalysisResult = AnalysisResult & {
   metadata: {
     generatedAt: Date;
     model: string;
