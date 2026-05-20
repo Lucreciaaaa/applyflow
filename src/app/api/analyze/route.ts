@@ -6,7 +6,7 @@ export async function POST(req: Request) {
     const result = await runAnalysis(payload);
 
     return Response.json(result);
-  } catch (err) {
+  } catch {
     return Response.json({ error: "Analysis failed" }, { status: 500 });
   }
 }

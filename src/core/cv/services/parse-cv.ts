@@ -11,7 +11,7 @@ function sanitizeText(text: string): string {
 
 async function getPdfParser() {
   const pdfModule = await import("pdf-parse");
-  return pdfModule as unknown as (buffer: Buffer) => Promise<{ text: string }>;
+  return pdfModule as unknown as (_buffer: Buffer) => Promise<{ text: string }>;
 }
 
 // PDF Uploading & Extraction
@@ -123,7 +123,6 @@ export async function parseCv(cvSource: CvSource): Promise<ParsedCv> {
       },
     };
   } catch (error) {
-    console.error(error);
-    throw new Error("Failed to parse CV");
+    throw new Error("Failed to parse CV", { cause: error });
   }
 }
