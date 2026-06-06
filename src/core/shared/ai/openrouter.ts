@@ -1,30 +1,27 @@
-const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
-
-export async function callOpenRouter(prompt: string, model: string): Promise<string> {
-  const response = await fetch(OPENROUTER_URL, {
+export async function callOpenRouter(prompt: string, model: string) {
+  const res = await fetch("http://127.0.0.1:11434/api/generate", {
     method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       model,
-      messages: [
-        {
-          role: "user",
-          content: prompt,
-        },
-      ],
-      temperature: 0.2,
+      prompt,
+      stream: false,
+      options: { temperature: 0.3 },
     }),
   });
 
-  if (!response.ok) {
-    throw new Error("OpenRouter request failed");
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Ollama error ${res.status}: ${text}`);
   }
 
-  const data = await response.json();
+  const json = await res.json();
 
-  return data.choices[0].message.content;
+  const text = json?.response;
+
+  if (typeof text !== "string") {
+    throw new Error("Ollama: no response in output");
+  }
+
+  return text;
 }

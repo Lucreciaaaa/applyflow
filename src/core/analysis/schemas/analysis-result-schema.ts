@@ -1,7 +1,10 @@
 import { z } from "zod";
 
 export const AnalysisResultSchema = z.object({
-  matchScore: z.number().min(0).max(100),
+  matchScore: z.preprocess(
+    (val) => (typeof val === "string" ? parseInt(val, 10) : val),
+    z.number().min(0).max(100),
+  ),
   summary: z.string(),
   strengths: z.array(z.string()).max(5),
 
